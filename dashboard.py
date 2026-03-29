@@ -8,7 +8,7 @@ import joblib
 sns.set(style='dark')
 
 def load_data():
-    return pd.read_csv("attrition_dashboard_data.csv")  
+    return pd.read_csv("attrition_dashboard_data.csv")
 
 def load_model():
     return joblib.load("model_attrition.pkl")
