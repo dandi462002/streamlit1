@@ -1,4 +1,10 @@
-pandas>=2.1.0
-matplotlib>=3.7.0
-seaborn>=0.12.2
-streamlit>=1.24.0
+pandas
+matplotlib
+seaborn
+streamlit
+
+scikit-learn
+imbalanced-learn
+
+joblib
+requests
