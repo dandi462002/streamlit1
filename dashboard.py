@@ -3,24 +3,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 import joblib
-import requests
-import io
 
 
 sns.set(style='dark')
 
-@st.cache_resource
 def load_data():
-    return pd.read_csv("https://raw.githubusercontent.com/dandi462002/Belajar-Penerapan-Data-Science/main/attrition_dashboard_data.csv")  
+    return pd.read_csv("attrition_dashboard_data.csv")  
 
-@st.cache_resource
 def load_model():
-    url = "https://raw.githubusercontent.com/dandi462002/Belajar-Penerapan-Data-Science/main/model_attrition.pkl"
-    response = requests.get(url)
-    return joblib.load(io.BytesIO(response.content))
+    return joblib.load("model_attrition.pkl")
 
-
-    
 df = load_data()
 model = load_model()
 
