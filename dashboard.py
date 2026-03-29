@@ -7,10 +7,10 @@ import joblib
 sns.set(style='dark')
 
 def load_data():
-    return pd.read_csv("attrition_dashboard_data.csv")  
+    return pd.read_csv("https://raw.githubusercontent.com/dandi462002/Belajar-Penerapan-Data-Science/main/attrition_dashboard_data.csv")  
 
 def load_model():
-    return joblib.load("model_attrition.pkl")
+    return joblib.load("https://raw.githubusercontent.com/dandi462002/Belajar-Penerapan-Data-Science/main/model_attrition.pkl")
 
 df = load_data()
 model = load_model()
