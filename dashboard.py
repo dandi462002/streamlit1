@@ -4,6 +4,7 @@ import seaborn as sns
 import streamlit as st
 import joblib
 import requests
+import io
 
 sns.set(style='dark')
 
