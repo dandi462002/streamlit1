@@ -10,8 +10,10 @@ def load_data():
     return pd.read_csv("https://raw.githubusercontent.com/dandi462002/Belajar-Penerapan-Data-Science/main/attrition_dashboard_data.csv")  
 
 def load_model():
-    return joblib.load("https://raw.githubusercontent.com/dandi462002/Belajar-Penerapan-Data-Science/main/model_attrition.pkl")
-
+    url = "https://raw.githubusercontent.com/dandi462002/Belajar-Penerapan-Data-Science/main/model_attrition.pkl"
+    response = requests.get(url)
+    return joblib.load(io.BytesIO(response.content))
+    
 df = load_data()
 model = load_model()
 
